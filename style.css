@@ -30,6 +30,12 @@ h1 {
 
 }
 
+#resetButton {
+   padding: 60px 60px;
+   cursor: pointer;
+   font-size: 60px;
+
+}
 
 #userButton {
     padding: 10px 10px;
