@@ -38,7 +38,24 @@ h1 {
 }
 
 #userButton {
-    padding: 10px 10px;
-    cursor: pointer
-    
+   font-size: 50px;
+   padding: 30px 30px; 
+   cursor: pointer   
+ }
+
+ #timer {
+   font-size: 90px;
+   padding: 60px 60px
+ }
+
+ .buttonsContainer {
+   display: flex;
+   gap: 50px;
+   justify-content: center;
+ }
+
+ .buttonUser {
+   display: flex;
+   justify-content: center;
+   margin-top: 70px;      
  }
