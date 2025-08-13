@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temporizador Pomodoro</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <h1>Estructura básica del Temporizador Pomodoro</h1>
-    <img src="images\pomodoro.jpg" alt="Un temporizador con forma de tomate" >
-    <div id="timer" style="text-align: center";>        
+    <img
+      src="images\pomodoro.jpg"
+      alt="Un temporizador con forma de tomate"
+      id="tomato-timer-img"
+    />
+    <div id="timer" style="text-align: center" ;></div>
+    <div class="buttonsContainer" style="text-align: center" ;>
+      <button style="display: block; margin: auto" id="startButton">
+        Iniciar
+      </button>
+      <button style="display: block; margin: auto" id="resetButton">
+        Reset
+      </button>
     </div>
-    <div class="buttonsContainer" style="text-align: center";>
-        <button style="display: block; margin: auto;" id="startButton">Iniciar</button>   
-        <button style="display: block; margin: auto;" id="resetButton">Reset</button>
-    </div>    
-    <div class="buttonUser" style="text-align: center;">
-    <button id="userButton">Change user</button>
+    <div class="buttonUser" style="text-align: center">
+      <button id="userButton">Change user</button>
     </div>
-    <script  src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

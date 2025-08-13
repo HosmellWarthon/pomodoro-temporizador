@@ -1,61 +1,65 @@
 html {
-    font-family: "Roboto", sans-serif;    
-    background-color: hsl(56, 97%, 75%);
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(56, 97%, 75%);
 }
- body {
-    margin: 0 auto;
-    width: 600px;
-    padding: 0 20px 20px 20px;
-    
- }
+body {
+  margin: 0 auto;
+  width: 600px;
+  padding: 0 20px 20px 20px;
+}
 
 h1 {
-    font-size: 50px;
-    margin: 0;
-    padding: 20px 0;
-    color: #ffffff;
-    text-shadow: 3px 3px 1px black;
+  font-size: 50px;
+  margin: 0;
+  padding: 20px 0;
+  color: #ffffff;
+  text-shadow: 3px 3px 1px black;
+  text-align: center;
 }
- img {
-    display: block;
-    margin: 0 auto;
-    max-width:100%;
- }
-
 
 #startButton {
-   padding: 60px 60px;
-   cursor: pointer;
-   font-size: 60px;
-
+  padding: 60px 60px;
+  cursor: pointer;
+  font-size: 60px;
 }
 
 #resetButton {
-   padding: 60px 60px;
-   cursor: pointer;
-   font-size: 60px;
-
+  padding: 60px 60px;
+  cursor: pointer;
+  font-size: 60px;
 }
 
 #userButton {
-   font-size: 50px;
-   padding: 30px 30px; 
-   cursor: pointer   
- }
+  font-size: 50px;
+  padding: 30px 30px;
+  cursor: pointer;
+}
 
- #timer {
-   font-size: 90px;
-   padding: 60px 60px
- }
+#timer {
+  font-size: 90px;
+  padding: 60px 60px;
+}
 
- .buttonsContainer {
-   display: flex;
-   gap: 50px;
-   justify-content: center;
- }
+.buttonsContainer {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
 
- .buttonUser {
-   display: flex;
-   justify-content: center;
-   margin-top: 70px;      
- }
+.buttonUser {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+#tomato-timer-img {
+  max-width: 400px;
+  height: auto;
+  filter: contrast(1.1) brightness(1.05);
+  background: transparent;
+  mix-blend-mode: multiply;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  display: block;
+  margin: 0 auto;
+}
