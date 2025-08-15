@@ -18,21 +18,45 @@ h1 {
 }
 
 #startButton {
-  padding: 60px 60px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 200px;
+  font-size: 2rem;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 60px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 200px;
 }
 
 #resetButton {
-  padding: 60px 60px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 200px;
+  font-size: 2rem;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 60px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 200px;
 }
 
 #userButton {
-  font-size: 50px;
-  padding: 30px 30px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 200px;
+  font-size: 2rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-width: 200px;
 }
 
 #timer {
@@ -62,4 +86,14 @@ h1 {
   image-rendering: optimize-contrast;
   display: block;
   margin: 0 auto;
+}
+
+#timer {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
 }
