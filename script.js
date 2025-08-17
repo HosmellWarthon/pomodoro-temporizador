@@ -1,6 +1,11 @@
 let timeLeft = 25 * 60; // seconds
 let timerInterval = null;
 let isRunning = false;
+let currentSession = "work";
+const sessionConfig = {
+  work: 25 * 60,
+  break: 5 * 60,
+};
 
 function timeFormat(seconds) {
   let minutes = Math.floor(seconds / 60);
@@ -23,8 +28,13 @@ function countDown() {
   if (timeLeft <= 0) {
     clearInterval(timerInterval);
     isRunning = false;
-    alert("Toma un descanso");
-    resetTimer();
+    if (currentSession === "work") {
+      alert("Toma un descanso");
+      switchToSession("break");
+    } else {
+      alert("Vuelve al trabajo");
+    }
+    switchToSession("work");
   }
 }
 
@@ -51,7 +61,7 @@ function pauseTimer() {
 function resetTimer() {
   clearInterval(timerInterval);
   isRunning = false;
-  timeLeft = 25 * 60;
+  timeLeft = sessionConfig[currentSession];
   updateDisplay();
 
   let button = document.getElementById("resetButton");
@@ -61,13 +71,45 @@ function resetTimer() {
   buttonIniciarName.textContent = "Iniciar";
 }
 
+function switchToSession(newSession) {
+  if (isRunning) {
+    pauseTimer;
+  }
+  currentSession = newSession;
+  timeLeft = sessionConfig[currentSession];
+  updateDisplay();
+  updateSessionButton();
+}
+
+function updateSessionButton() {
+  const workButton = document.getElementById("workButton");
+  const breakButton = document.getElementById("breakButton");
+  workButton.classList.remove("active");
+  breakButton.classList.remove("active");
+  if (currentSession === "work") {
+    workButton.classList.add("active");
+    breakButton.classList.add("active");
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   updateDisplay();
+  updateSessionButton();
   let startPauseButton = document.getElementById("startButton");
   startPauseButton.addEventListener("click", startTimer);
 
   let startResetButton = document.getElementById("resetButton");
   startResetButton.addEventListener("click", resetTimer);
+
+  let workButton = document.getElementById("workButton");
+  workButton.addEventListener("click", function () {
+    switchToSession("work");
+  });
+
+  let breakButton = document.getElementById("breakButton");
+  breakButton.addEventListener("click", function () {
+    switchToSession("break");
+  });
 });
 //
 const changeUserButton = document.querySelector("#userButton");
