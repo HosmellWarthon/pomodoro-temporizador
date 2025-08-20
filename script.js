@@ -5,6 +5,7 @@ let currentSession = "work";
 const sessionConfig = {
   work: 25 * 60,
   break: 5 * 60,
+  longBreak: 15 * 60,
 };
 
 function timeFormat(seconds) {
@@ -84,11 +85,14 @@ function switchToSession(newSession) {
 function updateSessionButton() {
   const workButton = document.getElementById("workButton");
   const breakButton = document.getElementById("breakButton");
+  const longBreakButton = document.getElementById("longBreakButton");
   workButton.classList.remove("active");
   breakButton.classList.remove("active");
+  longBreakButton.classList.remove("active");
   if (currentSession === "work") {
     workButton.classList.add("active");
     breakButton.classList.add("active");
+    longBreakButton.classList.add("active");
   }
 }
 
@@ -109,6 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let breakButton = document.getElementById("breakButton");
   breakButton.addEventListener("click", function () {
     switchToSession("break");
+  });
+
+  let longBreakButton = document.getElementById("longBreakButton");
+  longBreakButton.addEventListener("click", function () {
+    switchToSession("longBreak");
   });
 });
 //
