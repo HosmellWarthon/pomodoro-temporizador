@@ -80,6 +80,7 @@ function switchToSession(newSession) {
   timeLeft = sessionConfig[currentSession];
   updateDisplay();
   updateSessionButton();
+  pauseTimer();
 }
 
 function updateSessionButton() {
