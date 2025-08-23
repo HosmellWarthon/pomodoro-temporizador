@@ -127,7 +127,7 @@ const changeUserButton = document.querySelector("#userButton");
 const myHeading = document.querySelector("h1");
 
 function newUserName() {
-  const newName = prompt("Ingresa tu nombre");
+  let newName = document.getElementById("userName").value;
   if (!newName) {
     newUserName();
   } else {

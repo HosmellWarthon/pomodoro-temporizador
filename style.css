@@ -132,3 +132,30 @@ h1 {
 .sessionButton.active:hover {
   transform: translateY(-3px);
 }
+
+.buttonUser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.usernameLabel label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.userName input {
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.userName input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 6px rgba(79, 172, 254, 0.5);
+}
