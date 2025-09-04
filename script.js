@@ -7,6 +7,7 @@ const sessionConfig = {
   break: 5 * 60,
   longBreak: 15 * 60,
 };
+let alarm = document.getElementById("alarm");
 
 function timeFormat(seconds) {
   let minutes = Math.floor(seconds / 60);
@@ -28,12 +29,13 @@ function countDown() {
 
   if (timeLeft <= 0) {
     clearInterval(timerInterval);
+
     isRunning = false;
     if (currentSession === "work") {
-      alert("Toma un descanso");
+      alarm.play();
       switchToSession("break");
     } else {
-      alert("Vuelve al trabajo");
+      alarm.play();
     }
     switchToSession("work");
   }
